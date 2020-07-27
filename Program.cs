@@ -13,7 +13,7 @@ namespace first
         {
             if (n2 == 0)
             {
-                
+                Thread.Sleep(5000);
                 Console.WriteLine("\n" + n1);
                 return n1;
             }
@@ -27,7 +27,11 @@ namespace first
             while (true)
             {
                 var input = Console.ReadLine();
-                
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("Wrong input, Try again please...");
+                    continue;
+                }
 
                 if (input == "END")
                 {
