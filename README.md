@@ -1,2 +1,1 @@
-# GCD-With-multy-thread
-C#
+This application will help you to calculate GCD of two number, But you can calculate GCD in parallel mode :))
