@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Threading;
-using System.Threading.Channels;
 
 namespace first
 {
@@ -9,17 +7,18 @@ namespace first
     class Program
     {
 
-        static long GCD(long n1, long n2)
+        static long GCD(long n1, long n2, int len)
         {
             if (n2 == 0)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(len * 1000);
                 Console.WriteLine("\n" + n1);
+                Console.WriteLine(len);
                 return n1;
             }
             else
             {
-                return GCD(n2, n1 % n2);
+                return GCD(n2, n1 % n2, len);
             }
         }
         static void Main(string[] args)
@@ -43,7 +42,7 @@ namespace first
 
                 var t = 
                     new Thread(
-                        unused => GCD(long.Parse(numbers[0]), long.Parse(numbers[1]))
+                        unused => GCD(long.Parse(numbers[0]), long.Parse(numbers[1]), numbers[0].Length)
                     );
                 
                 t.Start();
