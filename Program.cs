@@ -13,7 +13,6 @@ namespace first
             {
                 Thread.Sleep(len * 1000);
                 Console.WriteLine("\n" + n1);
-                Console.WriteLine(len);
                 return n1;
             }
             else
