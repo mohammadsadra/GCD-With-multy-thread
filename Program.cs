@@ -59,11 +59,7 @@ namespace first
                 {
                     var numbers = input.Split(" ");
                     var a = long.Parse(numbers[0]) + long.Parse(numbers[1]);
-                    if (numbers[3] != null)
-                    {
-                        Console.WriteLine("Wrong input, Try again please...\n");
-                        continue;
-                    }
+                   
                     
 
 
